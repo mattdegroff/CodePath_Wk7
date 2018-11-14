@@ -33,19 +33,21 @@ To Recreate:
   2. when typing a comment, insert your javascript injection in the comment before what you want the comment to say
   3. Post comment, js will run every time pasge is loaded or hovered on as long as comment exists
   
-3. Unauthenticated Stored Cross-Site Scripting - CVE-2015-3440
+3. Authenticated Cross-Site Scripting (XSS) via Media File Metadata - CVE-2017-6814
 
 Summary: An unauthenticated attacker can inject JavaScript in WordPress comments. The script is triggered when the comment is viewed.
   Vulnerability: XSS
   Version: 4.2
-  Fixed: 4.2.1
+  Fixed: 4.2.13
 
-![](exploit2.gif)
+![](exploit3.gif)
 
 To Recreate:
-  1. Have Wordpress 4.2, must be signed out
-  2. when typing a comment, insert your javascript injection in the comment before what you want the comment to say
-  3. Post comment, js will run every time pasge is loaded or hovered on as long as comment exists
+  1. Have Wordpress 4.2
+  2. When adding a post, click on add media button
+  3. click create audio playlist
+  4. add any audio file, add your javascript to the description of the file
+  5. javascript will trigger when you create the audio playlist
 
 ## Resources
 
